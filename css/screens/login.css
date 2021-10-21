@@ -1,0 +1,67 @@
+.welcome-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 90px 0px;
+  text-align: center;
+}
+.welcome-header__title {
+  font-weight: 600;
+  /* Google fonts에서 가져올 때 bold를 600으로 사이즈를 가져왔기 때문! */
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7;
+}
+.login-form__input {
+}
+.login-form__btn {
+}
+.login-form__a {
+}
+/* BEM 방식을 따라서 ID를 쓰기보다 class를 쓰면 코드가
+  훨씬 간결해진다. 선택은 자유지만 BEM 따르면 좋아 */
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  border: none;
+  font-size: 20px;
+  padding: 20px 0px;
+}
+#login-form input:not([type="submit"]) {
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.2s ease-in-out;
+}
+#login-form input:focus {
+  border-color: var(--yellow);
+  /* variable.css 잘 활용하기! 재밌당 */
+}
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+#login-form input:nth-child(3) {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  border: none;
+}
+#login-form input[type="submit"] {
+  cursor: pointer;
+  /* 마우스 모양 지정!! */
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in;
+}
+#login-form input[type="submit"]:hover {
+  background-color: var(--yellow);
+}
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  /* inheritance 상속이라는 뜻으로 부모로부터 물려받는 것 */
+  font-size: 14px;
+}

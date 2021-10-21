@@ -1,0 +1,27 @@
+.settings-list {
+  margin-top: 70px;
+}
+.settings__setting {
+  padding: 25px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.settings__setting-column {
+  display: flex;
+}
+.settings__setting-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+.settings__setting-column:last-child {
+  color: var(--grey);
+}

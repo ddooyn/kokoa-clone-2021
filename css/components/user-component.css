@@ -1,0 +1,59 @@
+.user-component {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  transition: background-color 0.5s ease-out;
+  border-radius: 30px;
+}
+.user-component:not(.user-component__more):hover {
+  background-color: rgba(249, 220, 5, 0.3);
+}
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+.user-component__column:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.friends-screen__channel .user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.4);
+}
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+.user-component__title {
+  font-weight: 600;
+  font-size: 22px;
+}
+.user-component__subtitle {
+  margin-top: 8px;
+  color: var(--grey);
+  font-size: 17px;
+}
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+.user-component__title--not-bold {
+  font-weight: 400;
+}
+.user-component__time {
+  display: block;
+  margin-bottom: 10px;
+}
+.main-screen__chat .user-component {
+  padding-bottom: 10px;
+}

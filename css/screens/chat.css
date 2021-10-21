@@ -1,0 +1,156 @@
+#chat-screen,
+#chat-screen .status-bar,
+#chat-screen .alt-header {
+  background-color: #abc1d1;
+}
+#chat-screen .status-bar {
+  z-index: 2;
+}
+#chat-screen .alt-header {
+  z-index: 1;
+}
+.main-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chat__timestamp {
+  margin-top: 80px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+}
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+.message__author {
+  color: #5d676e;
+  font-size: 15px;
+  margin-bottom: 9px;
+  display: block;
+}
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+.message__bubble {
+  background-color: white;
+  padding: 10px 13px;
+  border-radius: 12px;
+  border-top-left-radius: 0px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.message__info:last-child {
+  margin-bottom: 25px;
+}
+.message__time {
+  margin: 0 5px;
+  font-size: 13px;
+  color: #5d676e;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+}
+.message-row--own .message__bubble {
+  border-radius: 12px;
+  border-top-right-radius: 0px;
+  order: 1;
+}
+.message-row--own {
+  order: 0;
+}
+
+.reply {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+  color: #5d676e;
+}
+.reply__column {
+  position: relative;
+}
+.reply__column:first-child {
+  width: 10%;
+}
+.reply__column:last-child {
+  width: 90%;
+}
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+.reply__column:last-child button {
+  color: black;
+}
+.reply__column:last-child > i {
+  font-size: 28px;
+  top: 13px;
+  right: 65px;
+}
+.reply input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #eeeeee;
+  border-radius: 30px;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease-in-out;
+}
+.reply input:focus {
+  background-color: white;
+}
+.reply button {
+  background-color: var(--yellow);
+  font-size: 13px;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.reply button:hover {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.message-row--own {
+  opacity: 0;
+  animation: fadeIn 0.3s linear forwards;
+  animation-delay: 0.6s;
+}

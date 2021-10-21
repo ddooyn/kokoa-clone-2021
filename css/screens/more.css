@@ -1,0 +1,41 @@
+.more-screen .icon-row {
+  margin-top: 35px;
+}
+.fa-exclamation-circle {
+  color: tomato;
+}
+.more-suggestions {
+  margin-top: 10px;
+  border-top: var(--main-border);
+  padding-top: 30px;
+}
+.more-suggestions__title {
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.more-suggestions__icons {
+  display: flex;
+  justify-content: space-between;
+}
+.more-suggestions__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 25%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.more-suggestions__icon:hover {
+  opacity: 0.8;
+}
+.more-suggestions__icon-image img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.more-suggestions__icon-text {
+  color: var(--grey);
+  margin-top: 10px;
+}
